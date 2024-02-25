@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #27283d;
+}
+
+.navigation {
+  display: flex;
+  background-color: #27283d;
+  box-shadow: 0 0 0 2px rgba(46, 48, 75, 0.3);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.navigation .navbar a {
+  display: inline-block;
+  padding-top: 0.8rem;
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: #00ffff;
+}
+
+.navigation .navbar a:hover {
+  color: #ffa03c;
+}
+
+.navigation .navbar a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #ffa03c;
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navigation .navbar a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navigation #menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+#menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+#menu-toggle span {
+  display: none;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.6s;
+}
+
+#menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+#menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+#menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+#menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+#menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+p {
+  color: white;
+}
+
+h1 {
+  color: #00ffff;
+  font-weight: 700;
+}
+
+#beranda {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 7%;
+  z-index: 99;
+}
+
+#beranda h1 {
+  font-size: 38px;
+}
+
+#beranda p {
+  font-size: 16px;
+  font-weight: 300;
+  padding-top: 1rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+#img {
+  width: 100%;
+}
+
+.sosmed a {
+  display: inline-block;
+  margin: 0 0.2rem;
+}
+
+#skill {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  color: #00ffff;
+  align-items: center;
+  padding-top: 7rem;
+}
+
+.skill-detail {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+
+.skill-detail-item {
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(#81689d, #474f7a);
+  box-shadow: -2px 2px 2px #ffd0ec;
+  border-radius: 20px;
+  padding: 1.5rem 0;
+  text-align: center;
+  line-height: 2rem;
+  margin: 10px;
+}
+
+.skill-detail-item h2 {
+  color: #000000;
+}
+
+#kursus {
+  padding: 8rem 7% 1.4rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+#kursus h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #00ffff;
+}
+
+.content .content-detail {
+  padding: 0 5rem;
+  line-height: 1.5rem;
+}
+
+.content-detail h3 {
+  color: #ffa03c;
+  font-size: 24px;
+  line-height: 2rem;
+}
+
+.content-detail .selengkapnya {
+  position: absolute;
+  border-radius: 2rem;
+  background: linear-gradient(#81689d, #474f7a);
+  color: #00ffff;
+  font-weight: 500SSSS;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+}
+
+#kontak > h2 {
+  padding-top: 7rem;
+  text-align: center;
+  font-size: 32px;
+  color: #00ffff;
+}
+
+.contact-detail {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#81689d, #474f7a);
+  padding: 64px 52px;
+  margin-bottom: 5rem;
+}
+
+form h3 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-size: 32px;
+}
+
+form .btn {
+  border: none;
+}
+
+form .btn:hover {
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #ffffff;
+  font-weight: 500;
+  padding: 8px 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.input-group label {
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 24px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #000000;
+  font-size: 18px;
+}
+
+.input-group input:focus {
+  border-bottom: 3px solid #000000;
+}
+
+footer {
+  padding: 36px 128px;
+  background: linear-gradient(#81689d, #474f7a);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  #menu-toggle span {
+    display: inline-block;
+  }
+
+  .navigation .navbar div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#81689d, #474f7a);
+    height: auto;
+    right: -100%;
+    margin-top: 3.1rem;
+    border-radius: 1rem;
+    transition: all 0.7s;
+  }
+
+  .navigation .navbar a {
+    font-size: 18px;
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .navigation .navbar a::after {
+    transform-origin: 0 0;
+  }
+
+  .navigation .navbar a:hover::after {
+    transform: scaleX(0.4);
+  }
+
+  .navigation .navbar div.active {
+    right: 0;
+  }
+
+  .skill-detail-item {
+    margin: 2rem;
+  }
+
+  #kursus .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #kursus .content-detail {
+    margin-top: 2rem;
+  }
+
+  .content-detail h3 {
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #beranda h1 {
+    font-size: 28px;
+  }
+
+  #img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #beranda {
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  #img {
+    padding-bottom: 3rem;
+  }
+
+  #skill,
+  #kursus h2,
+  #kontak h2 {
+    font-size: 24px;
+  }
+
+  .content-img img {
+    width: 100%;
+  }
+
+  .content .content-detail {
+    padding: 0 1rem;
+  }
+
+  form {
+    margin: 0 1rem;
+    padding: 32px 28px;
+  }
+
+  form h3 {
+    font-size: 18px;
+  }
+
+  .form-group label,
+  ::placeholder {
+    font-size: 14px;
+  }
+
+  footer {
+    width: 100%;
+    padding: 1.2rem 5%;
+  }
+
+  footer h1 {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+}
