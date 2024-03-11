@@ -375,6 +375,10 @@ footer {
     padding: 0 1rem;
   }
 
+  #kontak {
+    width: 100%;
+  }
+
   form {
     margin: 0 1rem;
     padding: 32px 28px;
